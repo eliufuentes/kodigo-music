@@ -5,6 +5,14 @@ body {
   color: #212529; /* Texto en color oscuro */
   margin: 0;
   padding: 0;
+  display: flex; /* Flex para estructurar cuerpo, contenido y pie */
+  flex-direction: column; /* Alinear elementos en columna */
+  min-height: 100vh; /* Altura mínima de la ventana */
+}
+
+/* Ajuste para el contenedor principal */
+main {
+  flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
 }
 
 /* Ajuste para los contenedores */
@@ -15,28 +23,63 @@ body {
 }
 
 /* Títulos principales */
-h1 {
+h1, h2 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #007bff; /* Azul estilo Bootstrap */
   margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Párrafos */
+/* Subtítulos */
 p.lead {
   font-size: 1.25rem;
   color: #6c757d; /* Color secundario */
+  text-align: center;
 }
 
-/* Botones */
-.btn-primary {
-  background-color: #007bff;
-  border-color: #0056b3;
+/* Estilo para las tarjetas */
+.card {
+  height: 100%; /* Hace que las tarjetas tengan la misma altura */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: transform 0.2s ease-in-out;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #003865;
+.card:hover {
+  transform: scale(1.05); /* Animación al pasar el mouse */
+}
+
+/* Estilo para las imágenes en las tarjetas */
+.card-img-top {
+  object-fit: cover; /* Recorta la imagen para que encaje */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 300px; /* Altura uniforme para todas las imágenes */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Estilo para los botones */
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #138496;
+  color: #ffffff;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #218838;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
 }
 
 /* Pie de página */
@@ -45,8 +88,56 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   font-size: 0.875rem;
+  width: 100%; /* Se asegura de ocupar todo el ancho */
+}
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes para formularios */
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+}
+
+/* Texto dentro de formularios */
+form input::placeholder,
+form textarea::placeholder {
+  color: #6c757d;
+}
+
+/* Estilo para los títulos en los modales */
+.modal-title {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+/* Ajustes para el modal */
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
 }

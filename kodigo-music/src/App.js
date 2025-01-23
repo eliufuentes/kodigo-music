@@ -1,11 +1,18 @@
 import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import ContactForm from './pages/ContactForm';
 
 function App() {
   return (
-    <div className="container text-center mt-5">
-      <h1>Welcome to Kodigo Music</h1>
-      <p className="lead">This is a sample application with Bootstrap styles</p>
-      <button className="btn btn-primary">Click Me</button>
+    <div>
+      <Header />
+      <Home />
+      <Explore />
+      <ContactForm />
+      <Footer />
     </div>
   );
 }
