@@ -1,19 +1,20 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 import ContactForm from './pages/ContactForm';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Home />
-      <Explore />
-      <ContactForm />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/contact" element={<ContactForm />} />
+      </Routes>
+    </Router>
   );
 }
 
